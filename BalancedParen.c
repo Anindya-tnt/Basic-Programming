@@ -8,7 +8,6 @@
 void parenthesis(int pos, int n, int open, int close) {
    // character array to store a combination
    static char str[MAX_SIZE];
-   int hash_map[26] = {0};
    if (close == n) {
      //insert null to mark end of string
      str[2*n]='\0'; 
@@ -27,7 +26,7 @@ void parenthesis(int pos, int n, int open, int close) {
    }
 }
 
-// Wrapper function
+// Utility function
 void printParenthesis(int n) {
    if (n > 0) {
       parenthesis(0, n, 0, 0);
